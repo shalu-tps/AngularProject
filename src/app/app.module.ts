@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { LoginPageComponent } from './login-page/login-page.component';
+// import { DashboardComponent } from './dashboard/dashboard.component';
+// import { LoginPageComponent } from './login-page/login-page.component';
 import { UserSerService} from './user-ser.service';
 import { PostPageComponent } from './post-page/post-page.component';
 import { PostCommentComponent } from './post-comment/post-comment.component';
@@ -12,16 +12,19 @@ import { AuthGuard } from './auth.guard';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import {NotAuthGuard} from './not-auth.guard';
 import { AddPostComponent } from './add-post/add-post.component';
+import {LoginModule} from './login/login.module';
+import {DashboardMModule} from './dashboard-m/dashboard-m.module'; 
 import { UsersComponent } from './users/users.component';
 import { UserIdComponent } from './user-id/user-id.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
+import { from } from 'rxjs';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DashboardComponent,
-    LoginPageComponent,
+       AppComponent,
+    // DashboardComponent,
+    // LoginPageComponent,
     PostPageComponent,
     PostCommentComponent,
     AddPostComponent,
@@ -31,6 +34,8 @@ import { UserPostsComponent } from './user-posts/user-posts.component';
   ],
   imports: [
     BrowserModule,
+    DashboardMModule,
+    LoginModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,

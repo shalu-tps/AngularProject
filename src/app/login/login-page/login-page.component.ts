@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UserSerService} from '../user-ser.service';
+import {UserSerService} from 'src/app/user-ser.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 export class LoginPageComponent implements OnInit {
   form;
   public user;
-  public arr=[];
+  public arr=[]; 
   public data=[];
   public valid=false;
   public i;
