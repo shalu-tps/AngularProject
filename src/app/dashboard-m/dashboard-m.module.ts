@@ -21,7 +21,7 @@ const routes: Routes = [
     path:'addPost',component:AddPostComponent
   },
   {
-    path:'users',component:UsersComponent
+    path:'users',component:UsersComponent 
   },
   {
     path:'users/:id',component:UserIdComponent
